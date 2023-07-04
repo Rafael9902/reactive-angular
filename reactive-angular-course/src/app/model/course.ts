@@ -11,6 +11,11 @@ export interface Course {
   lessonsCount: number;
 }
 
+export enum CoursesCategories {
+  BEGINNER = 'BEGINNER',
+  ADVANCED = 'ADVANCED'
+}
+
 
 export function sortCoursesBySeqNo(c1: Course, c2: Course) {
   return c1.seqNo - c2.seqNo;
