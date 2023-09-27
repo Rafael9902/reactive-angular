@@ -16,6 +16,7 @@ import {catchError} from 'rxjs/operators';
 import {throwError} from 'rxjs';
 import {CoursesService} from "../services/courses.service";
 import {LoadingService} from "../services/loading.service";
+import {CoursesStoreService} from "../services/courses.store.service";
 
 @Component({
     selector: 'course-dialog',
@@ -27,6 +28,8 @@ export class CourseDialogComponent implements AfterViewInit {
     #coursesService = inject(CoursesService);
 
     #loadingService = inject(LoadingService);
+
+    #courseStore = inject(CoursesStoreService);
 
     form: FormGroup;
 
